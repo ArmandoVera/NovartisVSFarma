@@ -47,7 +47,7 @@
             </div>
              <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md border border-gray-200 dark:border-gray-700">
                 <h3 class="font-semibold text-gray-500 dark:text-gray-400">Mayor Inversión I+D</h3>
-                <p class="text-3xl font-bold text-orange-600 dark:text-orange-400 mt-2" id="max-rd-company">J&J</p>
+                <p class="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-2" id="max-rd-company">J&J</p>
                 <p class="text-xl text-gray-700 dark:text-gray-300" id="max-rd-value">$17.23B</p>
             </div>
         </section>
@@ -103,6 +103,182 @@
                         <!-- Rows will be inserted by JavaScript -->
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <!-- R&D Investment Section -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Inversión en Investigación y Desarrollo (I+D) - 2024</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- R&D Pie Chart -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Distribución del Gasto en I+D</h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Comparativo del gasto en miles de millones de USD. Roche no se incluye por falta de datos consolidados.</p>
+                    </div>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="rdPieChart"></canvas>
+                    </div>
+                </div>
+                <!-- R&D Summary Table -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Resumen de Inversión en I+D</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Laboratorio</th>
+                                    <th scope="col" class="px-4 py-2">Inversión Total</th>
+                                    <th scope="col" class="px-4 py-2">Notas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700">
+                                    <td class="px-4 py-3 font-medium text-purple-600 dark:text-purple-400">Novartis</td>
+                                    <td class="px-4 py-3">$10.0 mil millones</td>
+                                    <td class="px-4 py-3">Gasto total de operaciones continuas.</td>
+                                </tr>
+                                <tr class="border-b dark:border-gray-700">
+                                    <td class="px-4 py-3 font-medium text-green-600 dark:text-green-400">AstraZeneca</td>
+                                    <td class="px-4 py-3">$13.6 mil millones</td>
+                                    <td class="px-4 py-3">Cifra exacta de $13,583 millones.</td>
+                                </tr>
+                                <tr class="border-b dark:border-gray-700">
+                                    <td class="px-4 py-3 font-medium text-blue-600 dark:text-blue-400">Johnson & Johnson</td>
+                                    <td class="px-4 py-3">$17.2 mil millones</td>
+                                    <td class="px-4 py-3">Además, ~$50B en innovación inorgánica (incl. M&A).</td>
+                                </tr>
+                                <tr class="border-b dark:border-gray-700">
+                                    <td class="px-4 py-3 font-medium text-orange-600 dark:text-orange-400">GSK</td>
+                                    <td class="px-4 py-3">£6.4 mil millones</td>
+                                    <td class="px-4 py-3">Equivalente a ~$8.18 mil millones USD.</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-600 dark:text-gray-400">Roche</td>
+                                    <td class="px-4 py-3">No especificado</td>
+                                    <td class="px-4 py-3">Solo se reporta inversión de CHF 1.2B en un nuevo centro de innovación.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Top Products Section -->
+        <section class="mt-10">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">Top Productos por Compañía (Ventas 2024)</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Novartis Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-purple-600 dark:text-purple-400 mb-4">Novartis</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Producto</th>
+                                    <th scope="col" class="px-4 py-2">Ingresos (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Entresto</td><td class="px-4 py-2">$7,822 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Cosentyx</td><td class="px-4 py-2">$6,141 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Kesimpta</td><td class="px-4 py-2">$3,224 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Kisqali</td><td class="px-4 py-2">$3,033 millones</td></tr>
+                                <tr><td class="px-4 py-2 font-medium">Promacta/Revolade</td><td class="px-4 py-2">$2,216 millones</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- AstraZeneca Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-green-600 dark:text-green-400 mb-4">AstraZeneca</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Producto</th>
+                                    <th scope="col" class="px-4 py-2">Ingresos (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Farxiga</td><td class="px-4 py-2">$7,656 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Tagrisso</td><td class="px-4 py-2">$6,580 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Imfinzi</td><td class="px-4 py-2">$4,717 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Ultomiris</td><td class="px-4 py-2">$3,924 millones</td></tr>
+                                <tr><td class="px-4 py-2 font-medium">Calquence</td><td class="px-4 py-2">$3,129 millones</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- J&J Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4">Johnson & Johnson</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Producto</th>
+                                    <th scope="col" class="px-4 py-2">Ingresos (USD)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">DARZALEX</td><td class="px-4 py-2">$11,670 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">STELARA</td><td class="px-4 py-2">$10,361 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">INVEGA Family</td><td class="px-4 py-2">$4,222 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">TREMFYA</td><td class="px-4 py-2">$3,670 millones</td></tr>
+                                <tr><td class="px-4 py-2 font-medium">IMBRUVICA</td><td class="px-4 py-2">$3,038 millones</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- GSK Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-orange-600 dark:text-orange-400 mb-4">GSK</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Producto</th>
+                                    <th scope="col" class="px-4 py-2">Ingresos (GBP)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Shingrix</td><td class="px-4 py-2">£3,364 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Trelegy Ellipta</td><td class="px-4 py-2">£2,702 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Dovato</td><td class="px-4 py-2">£2,239 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Nucala</td><td class="px-4 py-2">£1,784 millones</td></tr>
+                                <tr><td class="px-4 py-2 font-medium">Benlysta</td><td class="px-4 py-2">£1,490 millones</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Roche Card -->
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                    <h3 class="text-xl font-bold text-gray-600 dark:text-gray-400 mb-4">Roche</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" class="px-4 py-2">Producto</th>
+                                    <th scope="col" class="px-4 py-2">Ingresos (CHF)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Ocrevus</td><td class="px-4 py-2">CHF 6,744 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Hemlibra</td><td class="px-4 py-2">CHF 4,503 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Vabysmo</td><td class="px-4 py-2">CHF 3,864 millones</td></tr>
+                                <tr class="border-b dark:border-gray-700"><td class="px-4 py-2 font-medium">Tecentriq</td><td class="px-4 py-2">CHF 3,640 millones</td></tr>
+                                <tr><td class="px-4 py-2 font-medium">Perjeta</td><td class="px-4 py-2">CHF 3,616 millones</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -205,17 +381,19 @@
             ];
 
             const colors = {
-                Novartis: 'rgba(147, 51, 234, 0.7)', // Purple
-                AstraZeneca: 'rgba(34, 197, 94, 0.7)', // Green
-                GSK: 'rgba(234, 88, 12, 0.7)', // Orange
-                'J&J': 'rgba(59, 130, 246, 0.7)' // Blue
+                Novartis: 'rgba(147, 51, 234, 0.8)', // Purple
+                AstraZeneca: 'rgba(34, 197, 94, 0.8)', // Green
+                GSK: 'rgba(234, 88, 12, 0.8)', // Orange
+                'J&J': 'rgba(59, 130, 246, 0.8)', // Blue
+                Roche: 'rgba(107, 114, 128, 0.8)' // Gray
             };
             
             const borderColors = {
                 Novartis: 'rgb(147, 51, 234)',
                 AstraZeneca: 'rgb(34, 197, 94)',
                 GSK: 'rgb(234, 88, 12)',
-                'J&J': 'rgb(59, 130, 246)'
+                'J&J': 'rgb(59, 130, 246)',
+                Roche: 'rgb(107, 114, 128)'
             };
 
             // --- Llenar la tabla de datos ---
@@ -355,6 +533,49 @@
                     }]
                 },
                 options: { ...chartOptions, indexAxis: 'y', plugins: { legend: { display: false } } }
+            });
+
+            // --- Gráfico de Pie de I+D ---
+            const rdPieCtx = document.getElementById('rdPieChart').getContext('2d');
+            new Chart(rdPieCtx, {
+                type: 'pie',
+                data: {
+                    labels: companyData.map(c => c.name),
+                    datasets: [{
+                        label: 'Gasto en I+D (B USD)',
+                        data: companyData.map(c => c.rd),
+                        backgroundColor: companyData.map(c => colors[c.name]),
+                        borderColor: '#fff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                             labels: {
+                                color: document.body.classList.contains('dark') ? '#E5E7EB' : '#4B5563',
+                                font: { size: 12 },
+                                boxWidth: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    let value = context.raw;
+                                    label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value) + 'B';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
             });
         });
     </script>
